@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Hover</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        img {
+            width: 450px;
+            height: 300px;
+        }
+        
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mona">
+        <img src="mona1.png" />
+        <img src="mona1.png" />
+        <img src="mona1.png" />
+        <img src="mona1.png" />
+    </div>
+    <script>
+        $(document).ready(function() {});
+        $("img").hover(cambiar, restaurar); {};
+
+        function cambiar(e) {
+            $(this).attr("src", $(this).attr("src").replace("mona1.png", "mona2.jpg"));
+        }
+
+        function restaurar(e) {
+            $(this).attr("src", $(this).attr("src").replace("mona2.jpg", "mona1.png"));
+        }
+    </script>
